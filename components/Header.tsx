@@ -19,11 +19,11 @@ export default function Header() {
       </div>
       <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
       <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        <h1 className="font-bold">
+        <span className="font-bold">
           🥦 Calo<span className="text-orange-500">bro.</span>
-        </h1>{' '}
-        <p className="text-2xl">Enterprise Platform</p>
-        <p className="text-sm"> For business users only.</p>
+        </span>{' '}
+        <span className="text-2xl">Enterprise Platform</span>
+        <span className="text-sm"> For business users only.</span>
       </p>
     </div>
   );
