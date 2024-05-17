@@ -1,12 +1,11 @@
-export default function DeployButton() {
+export default function BackButton() {
   return (
     <a
       className="py-2 px-3 flex rounded-md no-underline hover:bg-btn-background-hover border"
-      href="https://fatex3x.wixsite.com/calobro"
-      target="_blank"
+      href="/protected"
       rel="noreferrer"
     >
-      🥦 {''}Main Page
+      ⏪ {''}Back
     </a>
   );
 }

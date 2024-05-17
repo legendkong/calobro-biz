@@ -4,6 +4,7 @@ import { createClient } from '@/utils/supabase/server';
 import FetchDataSteps from '@/components/tutorial/FetchDataSteps';
 import Header from '@/components/Header';
 import { redirect } from 'next/navigation';
+import Link from 'next/link';
 
 export default async function ProtectedPage() {
   const supabase = createClient();
@@ -31,8 +32,34 @@ export default async function ProtectedPage() {
         </nav>
       </div>
 
-      <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
+      <div className="animate-in flex-1 flex flex-col gap-10 opacity-0 max-w-4xl px-3">
         <Header />
+        <div className="text-center">
+          <span className="font-bold">Company: </span>
+          <span className="text-orange-500">
+            BRASH BOYS LLP (Pastry and Coffee)
+          </span>
+        </div>
+        <div className="-mt-5 justify-center text-center">
+          <span className="font-bold">ACRA no.: </span>
+          <span className="text-orange-500">TLK12345678</span>
+        </div>
+        <div className="flex gap-4 items-center justify-center">
+          {/* Use flex to align buttons side by side */}
+          <Link href="/upload">
+            {/* Wrap button in Link and set href to '/upload' */}
+            <button className="bg-purple-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Upload Recipe
+            </button>
+          </Link>
+          <Link href="/viewrecipes">
+            {' '}
+            {/* Wrap button in Link and set href to '/viewrecipes' */}
+            <button className="bg-blue-500 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded">
+              View Recipes
+            </button>
+          </Link>
+        </div>
         <main className="flex-1 flex flex-col gap-6">
           <h2 className="font-bold text-4xl mb-4">Next steps</h2>
           <FetchDataSteps />
@@ -40,17 +67,7 @@ export default async function ProtectedPage() {
       </div>
 
       <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Powered by{' '}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Supabase
-          </a>
-        </p>
+        <p>As part of our FYP project</p>
       </footer>
     </div>
   );
