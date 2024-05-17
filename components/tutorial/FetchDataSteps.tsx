@@ -1,5 +1,6 @@
-import Step from "./Step";
-import Code from "./Code";
+import Step from './Step';
+import Code from './Code';
+import CheckedStep from './checkedStep';
 
 const create = `
 create table notes (
@@ -50,49 +51,32 @@ export default function Page() {
 export default function FetchDataSteps() {
   return (
     <ol className="flex flex-col gap-6">
-      <Step title="Create some tables and insert some data">
+      <CheckedStep title="Sign up for a company account">
         <p>
-          Head over to the{" "}
-          <a
-            href="https://supabase.com/dashboard/project/_/editor"
-            className="font-bold hover:underline text-foreground/80"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Table Editor
-          </a>{" "}
-          for your Supabase project to create a table and insert some example
-          data. If you're stuck for creativity, you can copy and paste the
-          following into the{" "}
-          <a
-            href="https://supabase.com/dashboard/project/_/sql/new"
-            className="font-bold hover:underline text-foreground/80"
-            target="_blank"
-            rel="noreferrer"
-          >
-            SQL Editor
-          </a>{" "}
-          and click RUN!
+          Head over to the Login page and sign up an account for your company.
+          Provide your company's ACRA registration no. too. It's okay to upload
+          an easy-to-make recipe. Your awesome recipe will be consumed by many
+          later!
         </p>
-        <Code code={create} />
-      </Step>
-
-      <Step title="Query Supabase data from Next.js">
+      </CheckedStep>
+      <Step title="Upload your company's food recipe">
         <p>
-          To create a Supabase client and query data from an Async Server
-          Component, create a new page.tsx file at{" "}
-          <span className="px-2 py-1 rounded-md bg-foreground/20 text-foreground/80">
-            /app/notes/page.tsx
-          </span>{" "}
-          and add the following.
+          Fill in the neccessary details and upload your recipe. You can also
+          add a photo of your recipe to make it more appealing.
         </p>
-        <Code code={server} />
-        <p>Alternatively, you can use a Client Component.</p>
-        <Code code={client} />
       </Step>
-
-      <Step title="Build in a weekend and scale to millions!">
-        <p>You're ready to launch your product to the world! 🚀</p>
+      <Step title="Wait for Calobro's admin approval">
+        <p>
+          Your recipe will be vetted by Calobro's admin. Once approved, your
+          recipe will show up to the public.
+        </p>
+      </Step>
+      <Step title="Get rewarded with incentives and real customers">
+        <p>
+          If your recipe gains traction, you will be rewarded with incentives
+          and real customers. You can also get feedback from your customers to
+          improve your recipe.
+        </p>
       </Step>
     </ol>
   );

@@ -13,9 +13,9 @@ export default function SignUpUserSteps() {
           >
             Login
           </Link>{' '}
-          page and sign up an account for your company. It's okay to upload an
-          easy-to-make recipe. Your awesome recipe will be consumed by many
-          later!
+          page and sign up an account for your company. Provide your company's
+          ACRA registration no. too. It's okay to upload an easy-to-make recipe.
+          Your awesome recipe will be consumed by many later!
         </p>
       </Step>
       <Step title="Upload your company's food recipe">
