@@ -22,7 +22,9 @@ export default function Header() {
         <span className="font-bold">
           🥦 Calo<span className="text-orange-500">bro.</span>
         </span>{' '}
+        <br />
         <span className="text-2xl">Enterprise Platform</span>
+        <br />
         <span className="text-sm"> For business users only.</span>
       </p>
     </div>
